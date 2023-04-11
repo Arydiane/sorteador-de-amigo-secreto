@@ -1,5 +1,7 @@
+@import './styles/variaveis';
+
 html {
-  background: #4B69FD;
+  background: $blue;
   border: 2px solid black;
   font-family: 'Poppins', sans-serif;
 }
