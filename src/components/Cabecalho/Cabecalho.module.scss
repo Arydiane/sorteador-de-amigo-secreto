@@ -1,0 +1,29 @@
+@import '../../styles/breakpoints';
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 120px;
+
+    @media (max-width: $mobile) {
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }   
+}
+
+.imagem__logo {
+    background-image: url("../../../public/imagens/logo.png");
+    width: 351px;
+    height: 117px;
+
+    @media (max-width: $mobile) {
+        background-image: url("../../../public/imagens/logo-pequeno.png");
+        width: 235px;
+        height: 199px;
+    }
+}
+
+.participante {
+    z-index: 1;
+}
