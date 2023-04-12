@@ -13,7 +13,7 @@ const mockNavegacao = jest.fn()
 
 jest.mock('react-router-dom', () => {
     return {
-        useNavigate: mockNavegacao
+        useNavigate: () => mockNavegacao
     }
 })
 
@@ -52,5 +52,6 @@ describe('quando existem participantes suficientes', () => {
         fireEvent.click(botao)
 
         expect(mockNavegacao).toHaveBeenCalledTimes(1)
+        expect(mockNavegacao).toHaveBeenCalledWith('/sorteio')
     })
 })
