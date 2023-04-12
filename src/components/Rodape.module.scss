@@ -1,0 +1,43 @@
+@import '../styles/variaveis'; 
+@import '../styles/breakpoints'; 
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+    }
+
+    .botao {
+        width: 350px;
+        height: 80px;
+        font-size: 20px;
+        box-shadow: 2px 2px 0px 1px $black;
+        border-radius: 45px;
+        background-color: $orange;
+        color: $white;
+        cursor: pointer;
+
+        @media (max-width: $mobile) {
+            width: 220px;
+            margin: 32px 0;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+
+    img {
+        @media (max-width: $mobile) {
+            margin-top: 32px;
+        }
+    }
+}
