@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import Formulario from "./components/Formulario";
 import Cabecalho from "./components/Cabecalho";
+import Configuracao from "./pages/Configuracao";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <RecoilRoot>
         <Cabecalho />
         <Routes>
-          <Route path="/" element={<Formulario />}/>
+          <Route path="/" element={<Configuracao />}/>
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
