@@ -15,6 +15,9 @@ const Sorteio = () => {
         evento.preventDefault()
         if (resultado.has(participanteDaVez)) {
             setAmigoSecreto(resultado.get(participanteDaVez)!)
+            setTimeout(() => {
+                setAmigoSecreto("")
+            }, 5000)
         }
     }
 
@@ -25,7 +28,7 @@ const Sorteio = () => {
                 <form onSubmit={sortear}>
                     <select
                         required
-                        name="participanteDaVez" id="participanteDaVez" placeholder="Selecione o seu nome"
+                        name="participanteDaVez" id="participanteDaVez" placeholder="Selecione o participante"
                         value={participanteDaVez}
                         onChange={evento => setParticipanteDaVez(evento.target.value)}
                     >
